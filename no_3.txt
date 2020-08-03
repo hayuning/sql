@@ -1,0 +1,13 @@
+// Soal 3 Memasukkan Data pada Table
+
+INSERT INTO `users` (`id`, `name`, `email`, `password`) 
+VALUES 	(NULL, 'John Doe', 'john@doe.com', 'john123'), 
+		(NULL, 'John Doe', 'john@doe.com', 'jenita123')
+		
+INSERT INTO `categories` (`id`, `name`) 
+VALUES ('1', 'gadget'), ('2', 'cloth'), ('3', 'men'), ('4', 'women'), ('5', 'branded');
+
+INSERT INTO `items` (`id`, `name`, `description`, `price`, `stock`, `category_id`) 
+VALUES ('', 'Sumsang b50', 'hape keren dari merek sumsang', '4000000', '100', '1'), 
+('', 'Uniklooh', 'baju keren dari brand ternama ', '500000', '50', '2'), 
+(NULL, 'IMHO Watch', 'jam tangan anak yang jujur banget ', '2000000', '10', '1')

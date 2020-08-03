@@ -1,0 +1,26 @@
+// Soal 2 Membuat Table di Dalam Database
+
+CREATE TABLE users(
+   id   INT              NOT NULL AUTO_INCREMENT,
+   name VARCHAR (255)    NOT NULL,
+   email  VARCHAR(255)   NOT NULL,
+   password  VARCHAR (255) NOT NULL,
+   PRIMARY KEY (id)
+);
+
+CREATE TABLE items(
+   id   INT              NOT NULL AUTO_INCREMENT,
+   name VARCHAR (255)    NOT NULL,
+   description  VARCHAR(255)   NOT NULL,
+   price  INT NOT NULL,
+   stock INT NOT NULL,
+   category_id INT NOT NULL,
+   PRIMARY KEY (id),
+   FOREIGN KEY (category_id) REFERENCES categories(id)
+);
+
+CREATE TABLE categories(
+id INT NOT NULL AUTO_INCREMENT,
+name VARCHAR(255) NOT NULL,
+PRIMARY KEY(id)
+);

@@ -1,0 +1,25 @@
+//Soal 4 Mengambil Data dari Database
+
+// a. Mengambil data users
+SELECT id, name, email
+FROM `users`
+
+
+// b. mengambil data items
+//- Buatlah sebuah query untuk mendapatkan data item pada table items yang memiliki harga di atas 1000000 (satu juta).
+
+SELECT * FROM `items` WHERE price > '1000000'
+
+
+//-- Buat sebuah query untuk mengambil data item pada table items yang memiliki name serupa atau mirip (like) dengan kata kunci “uniklo”, “watch”, atau “sang” (pilih salah satu saja).
+
+SELECT * FROM `items` WHERE name LIKE '%uniklo%'
+SELECT * FROM `items` WHERE name LIKE '%Watch%'
+SELECT * FROM `items` WHERE name LIKE '%sang%'
+
+
+// c. Menampilkan data items join dengan kategori
+
+SELECT items.*, categories.name 
+FROM items 
+JOIN categories ON items.category_id = categories.id

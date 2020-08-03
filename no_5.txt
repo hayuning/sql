@@ -1,0 +1,4 @@
+// Soal 5 Mengubah Data dari Database
+
+UPDATE items SET price='2500000' 
+WHERE name LIKE '%sumsang%'
